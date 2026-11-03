@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="sw">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#123b70"><meta name="description" content="GANDO EDUCATION - Jifunze, fanya mazoezi na jiandae kwa mitihani.">
+<link rel="manifest" href="manifest.webmanifest">
+<title>GANDO EDUCATION</title>
+<style>
+:root{--blue:#123b70;--green:#17a66a;--bg:#f3f6fb;--ink:#17243a}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+header{background:linear-gradient(135deg,#123b70,#176b78);color:white;padding:24px 18px 30px;border-radius:0 0 25px 25px}
+.brand{font-size:12px;letter-spacing:2px;opacity:.85}.hero{font-size:27px;font-weight:800;margin:8px 0}.sub{opacity:.9}
+.top{display:flex;justify-content:space-between;align-items:center}.lang{border:1px solid #ffffff80;background:#ffffff18;color:white;border-radius:10px;padding:8px}
+main{max-width:720px;margin:auto;padding:16px}.welcome{margin:18px 0 12px;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.card{background:white;border-radius:16px;padding:16px;box-shadow:0 4px 16px #18375a12;border:1px solid #e7edf5}
+.card b{display:block;margin:7px 0 4px}.emoji{font-size:25px}.muted{color:#637188;font-size:13px}
+select,button{font:inherit}select{width:100%;padding:12px;border:1px solid #d7e0eb;border-radius:12px;background:white;margin:8px 0 16px}
+.section{margin:22px 0 10px;font-size:18px}.subject{display:flex;justify-content:space-between;align-items:center;padding:13px 0;border-bottom:1px solid #edf0f5}
+.btn{display:inline-block;border:0;border-radius:12px;background:var(--blue);color:white;padding:12px 16px;text-decoration:none;font-weight:700}
+.whatsapp{position:fixed;right:18px;bottom:18px;background:#20bf68;color:#fff;border-radius:30px;padding:14px 18px;text-decoration:none;font-weight:800;box-shadow:0 5px 18px #0002}
+footer{text-align:center;padding:28px;color:#77849a;font-size:12px}
+#notice{background:#e9f8f0;border:1px solid #c5ecd5;padding:12px;border-radius:12px;margin-top:12px}
+@media(min-width:600px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<header><div class="top"><div class="brand">GANDO EDUCATION</div><button class="lang" id="langBtn">Kiswahili / English</button></div>
+<div class="hero" id="hero">Karibu GANDO EDUCATION</div><div class="sub" id="tagline">Jifunze leo, ongoza kesho.</div></header>
+<main>
+<div class="welcome" id="chooseClass">Chagua darasa lako</div>
+<select id="classSelect" aria-label="Chagua darasa"><option>Form I</option><option>Form II</option><option>Form III</option><option>Form IV</option></select>
+<div class="grid">
+<div class="card"><div class="emoji">📚</div><b id="lessons">Masomo na Notes</b><div class="muted" id="lessonDesc">Soma mada mbalimbali</div></div>
+<div class="card"><div class="emoji">📝</div><b id="tests">Mitihani</b><div class="muted" id="testDesc">Jipime kwa maswali</div></div>
+<div class="card"><div class="emoji">🏆</div><b id="results">Matokeo</b><div class="muted" id="resultDesc">Fuatilia maendeleo yako</div></div>
+<div class="card"><div class="emoji">🌐</div><b id="languages">Lugha mbili</b><div class="muted" id="languageDesc">Kiswahili na English</div></div>
+</div>
+<h2 class="section" id="subjectsTitle">Masomo ya Secondary</h2>
+<div class="card" id="subjects">
+<div class="subject"><span>➗ Mathematics</span><span class="muted">Form I–IV</span></div>
+<div class="subject"><span>🧬 Biology</span><span class="muted">Form I–IV</span></div>
+<div class="subject"><span>⚛️ Physics</span><span class="muted">Form I–IV</span></div>
+<div class="subject"><span>🧪 Chemistry</span><span class="muted">Form I–IV</span></div>
+<div class="subject"><span>📖 English</span><span class="muted">Form I–IV</span></div>
+<div class="subject"><span>🗣️ Kiswahili</span><span class="muted">Form I–IV</span></div>
+<div class="subject"><span>🌍 Geography</span><span class="muted">Form I–IV</span></div>
+<div class="subject"><span>🏛️ History</span><span class="muted">Form I–IV</span></div>
+</div>
+<div id="notice"><b id="contactTitle">Mawasiliano</b><p id="contactText">Una swali au unahitaji msaada? Tuandikie WhatsApp.</p>
+<a class="btn" href="https://wa.me/255716485776?text=Habari%20GANDO%20EDUCATION%2C%20nahitaji%20msaada." target="_blank" rel="noopener">WhatsApp: 0716 485 776</a></div>
+</main>
+<footer>© GANDO EDUCATION · Form I–IV</footer>
+<a class="whatsapp" href="https://wa.me/255716485776" target="_blank" rel="noopener">WhatsApp</a>
+<script>
+const translations={
+sw:{hero:"Karibu GANDO EDUCATION",tagline:"Jifunze leo, ongoza kesho.",chooseClass:"Chagua darasa lako",lessons:"Masomo na Notes",lessonDesc:"Soma mada mbalimbali",tests:"Mitihani",testDesc:"Jipime kwa maswali",results:"Matokeo",resultDesc:"Fuatilia maendeleo yako",languages:"Lugha mbili",languageDesc:"Kiswahili na English",subjectsTitle:"Masomo ya Secondary",contactTitle:"Mawasiliano",contactText:"Una swali au unahitaji msaada? Tuandikie WhatsApp."},
+en:{hero:"Welcome to GANDO EDUCATION",tagline:"Learn today, lead tomorrow.",chooseClass:"Choose your class",lessons:"Lessons and Notes",lessonDesc:"Study different topics",tests:"Exams",testDesc:"Test yourself with questions",results:"Results",resultDesc:"Track your progress",languages:"Two languages",languageDesc:"Swahili and English",subjectsTitle:"Secondary School Subjects",contactTitle:"Contact us",contactText:"Have a question or need help? Message us on WhatsApp."}
+};
+let lang="sw";document.getElementById("langBtn").onclick=()=>{lang=lang==="sw"?"en":"sw";for(const [id,val] of Object.entries(translations[lang]))document.getElementById(id).textContent=val;document.documentElement.lang=lang;};
+if("serviceWorker" in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));
+</script>
+</body></html>

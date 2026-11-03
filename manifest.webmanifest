@@ -1,0 +1,9 @@
+{
+  "name": "GANDO EDUCATION",
+  "short_name": "GANDO",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f3f6fb",
+  "theme_color": "#123b70",
+  "description": "Elimu ya Secondary Form I-IV kwa Kiswahili na English"
+}
