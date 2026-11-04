@@ -1,147 +1,93 @@
-<!doctype html>
-<html lang="sw">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#123b70">
-<meta name="description" content="GANDO EDUCATION - Jifunze, fanya mazoezi na jiandae kwa mitihani.">
-<link rel="manifest" href="./manifest.webmanifest">
-<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png">
-<title>GANDO EDUCATION</title>
+<!doctype html><html lang="sw"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#123b70"><link rel="manifest" href="./manifest.webmanifest"><title>GANDO EDUCATION</title>
 <style>
-:root{--blue:#123b70;--green:#17a66a;--bg:#f3f6fb;--ink:#17243a}
-*{box-sizing:border-box}
-body{margin:0;font-family:system-ui,Arial,sans-serif;background:var(--bg);color:var(--ink)}
-header{background:linear-gradient(135deg,#123b70,#176b78);color:white;padding:22px 18px 26px;border-radius:0 0 24px 24px}
-.brand{font-size:12px;letter-spacing:2px;opacity:.85}
-.hero{font-size:26px;font-weight:800;margin:8px 0}
-.sub{opacity:.9}
-.top{display:flex;justify-content:space-between;align-items:center;gap:8px}
-.lang{border:1px solid #ffffff80;background:#ffffff18;color:white;border-radius:10px;padding:8px}
-main{max-width:760px;margin:auto;padding:16px}
-.welcome{margin:18px 0 10px;font-weight:700}
-select{width:100%;padding:12px;border:1px solid #d7e0eb;border-radius:12px;background:white;margin:8px 0 16px;font:inherit}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.card{background:white;border-radius:16px;padding:16px;box-shadow:0 4px 16px #18375a12;border:1px solid #e7edf5}
-.action{width:100%;text-align:left;color:var(--ink);font:inherit;cursor:pointer}
-.action:active{transform:scale(.99)}
-.card b{display:block;margin:7px 0 4px}
-.emoji{font-size:25px}
-.muted{color:#637188;font-size:13px}
-.section{margin:22px 0 10px;font-size:18px}
-.subject{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:13px 0;border-bottom:1px solid #edf0f5}
-.subject:last-child{border-bottom:0}
-.subject button{border:0;background:#eef4fb;color:var(--blue);font-weight:700;border-radius:10px;padding:9px 12px;font:inherit;cursor:pointer}
-.btn{display:inline-block;border:0;border-radius:12px;background:var(--blue);color:white;padding:12px 16px;text-decoration:none;font-weight:700;cursor:pointer}
-.back{margin:4px 0 14px;background:#e6edf7;color:var(--blue)}
-.topic{background:white;border:1px solid #e7edf5;border-radius:14px;padding:14px;margin:10px 0}
-#notice{background:#e9f8f0;border:1px solid #c5ecd5;padding:12px;border-radius:12px;margin-top:18px}
-footer{text-align:center;padding:28px;color:#77849a;font-size:12px}
-.whatsapp{position:fixed;right:18px;bottom:18px;background:#20bf68;color:#fff;border-radius:30px;padding:13px 17px;text-decoration:none;font-weight:800;box-shadow:0 5px 18px #0002}
-[hidden]{display:none!important}
-@media(min-width:600px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
-</style>
-</head>
-<body>
-<header>
- <div class="top"><div class="brand">GANDO EDUCATION</div><button class="lang" id="langBtn" type="button">Kiswahili / English</button></div>
- <div class="hero" id="hero">Karibu GANDO EDUCATION</div>
- <div class="sub" id="tagline">Jifunze leo, ongoza kesho.</div>
-</header>
-<main>
- <section id="homeView">
-  <div class="welcome">Chagua darasa lako</div>
-  <select id="classSelect" aria-label="Chagua darasa">
-   <option>Form I</option><option>Form II</option><option>Form III</option><option>Form IV</option>
-  </select>
-  <div class="grid">
-   <button class="card action" id="lessonsBtn" type="button"><span class="emoji">📚</span><b>Masomo na Notes</b><span class="muted">Fungua masomo na notes</span></button>
-   <button class="card action" type="button" onclick="showNotice('Sehemu ya mitihani inaandaliwa.')"><span class="emoji">📝</span><b>Mitihani</b><span class="muted">Jipime kwa maswali</span></button>
-   <button class="card action" type="button" onclick="showNotice('Sehemu ya matokeo inaandaliwa.')"><span class="emoji">🏆</span><b>Matokeo</b><span class="muted">Fuatilia maendeleo yako</span></button>
-   <button class="card action" type="button" id="languageCard"><span class="emoji">🌐</span><b>Lugha mbili</b><span class="muted">Kiswahili na English</span></button>
-  </div>
-  <h2 class="section">Masomo ya Secondary</h2>
-  <div class="card" id="subjectsHome"></div>
-  <div id="notice"><b>Mawasiliano</b><p>Una swali au unahitaji msaada? Tuandikie WhatsApp.</p>
-   <a class="btn" href="https://wa.me/255716485776?text=Habari%20GANDO%20EDUCATION%2C%20nahitaji%20msaada." target="_blank" rel="noopener">WhatsApp: 0716 485 776</a>
-  </div>
- </section>
- <section id="subjectView" hidden>
-  <button class="btn back" id="backBtn" type="button">← Rudi kwenye masomo</button>
-  <h2 id="subjectHeading" class="section">Somo</h2>
-  <p id="classHeading" class="muted"></p>
-  <div class="topic"><b>Karibu kwenye notes</b><p id="subjectIntro">Chagua darasa lako ili kuona notes za somo hili.</p></div>
-  <h3 class="section">Mada za somo</h3>
-  <div id="topicList"></div>
-  <p class="muted">Notes za mada nyingine zitaongezwa hatua kwa hatua. Tutaendelea kujaza maudhui ya Form I–IV.</p>
- </section>
-</main>
-<footer>© GANDO EDUCATION · Form I–IV</footer>
-<a class="whatsapp" href="https://wa.me/255716485776" target="_blank" rel="noopener">WhatsApp</a>
+*{box-sizing:border-box}body{margin:0;background:#f3f6fb;color:#17243a;font-family:system-ui,Arial}header{background:linear-gradient(135deg,#123b70,#176b78);color:white;padding:24px 16px;border-radius:0 0 24px 24px}.wrap,main{max-width:850px;margin:auto}main{padding:16px}.top{display:flex;justify-content:space-between}.hero{font-size:26px;font-weight:800;margin:12px 0}.muted{color:#68768b;font-size:13px}.panel,.tile,.item{background:white;border:1px solid #e3eaf2;border-radius:15px;padding:15px}.toolbar{display:grid;grid-template-columns:1fr;gap:10px;margin:12px 0}.field{width:100%;padding:12px;border:1px solid #d7e0eb;border-radius:11px;background:white}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.tile{color:#17243a;text-align:left;min-height:100px;cursor:pointer}.tile b{display:block;margin:7px 0}.emoji{font-size:24px}h2{font-size:19px;margin:20px 0 10px}.action{border:0;border-radius:11px;padding:11px 14px;background:#123b70;color:white;font-weight:700;cursor:pointer}.alt{background:#eaf0f8;color:#123b70}.green{background:#159b63}.list{display:grid;gap:9px}.item{display:flex;justify-content:space-between;align-items:center;gap:10px}.item button{border:0;background:none;color:#123b70;font-weight:700;text-align:left;flex:1;padding:5px}.hidden{display:none!important}.note{line-height:1.7;white-space:pre-line}.pill{background:#edf4fb;color:#123b70;border-radius:20px;padding:5px 9px;font-size:12px}.option{display:block;width:100%;text-align:left;padding:12px;margin:8px 0;border:1px solid #dfe7f0;border-radius:10px;background:white}.selected{border:2px solid #123b70;background:#eef4fc}.progress{height:8px;background:#e5ebf3;border-radius:20px}.progress span{display:block;height:8px;background:#159b63}footer{text-align:center;color:#68768b;padding:25px;font-size:12px}@media(min-width:600px){.grid,.toolbar{grid-template-columns:repeat(4,1fr)}.toolbar{grid-template-columns:1fr 1fr}}
+</style></head><body>
+<header><div class="wrap"><div class="top"><b>GANDO EDUCATION</b><span>FORM I–IV</span></div><div class="hero">Karibu GANDO EDUCATION</div><div>Jifunze leo, ongoza kesho.</div></div></header>
+<main><section id="home">
+<div class="toolbar"><div><b>Chagua darasa</b><select id="form" class="field"><option>Form I</option><option>Form II</option><option>Form III</option><option>Form IV</option></select></div><div><b>Tafuta somo au mada</b><input id="search" class="field" placeholder="Andika jina la mada..."></div></div>
+<h2>Huduma za kujifunzia</h2><div class="grid">
+<button class="tile" id="lessons"><span class="emoji">📚</span><b>Masomo na Notes</b><span class="muted">Fungua mada na maelezo</span></button>
+<button class="tile" id="exams"><span class="emoji">📝</span><b>Mitihani</b><span class="muted">Jibu maswali ya mazoezi</span></button>
+<button class="tile" id="results"><span class="emoji">🏆</span><b>Matokeo</b><span class="muted">Angalia alama zako</span></button>
+<button class="tile" id="about"><span class="emoji">ℹ️</span><b>Kuhusu</b><span class="muted">Jinsi ya kutumia</span></button></div>
+<h2>Masomo yote</h2><div id="subjects" class="grid"></div>
+<div class="panel" style="margin-top:14px"><b>Mawasiliano</b><p class="muted">Wasiliana nasi kwa msaada.</p><a class="action green" href="https://wa.me/255716485776">WhatsApp</a></div></section>
+<section id="screen" class="hidden"><button class="action alt" id="back">← Nyumbani</button><span class="pill" id="crumb"></span><div id="content"></div></section></main><footer>© GANDO EDUCATION</footer>
 <script>
-const subjects = [
- ["➗","Mathematics","Namba, aljebra, jiometri na takwimu."],
- ["🧬","Biology","Viumbe hai, seli, afya na mazingira."],
- ["⚛️","Physics","Mwendo, nguvu, nishati, mwanga na umeme."],
- ["🧪","Chemistry","Maada, elementi, mchanganyiko na mabadiliko ya kikemia."],
- ["📖","English","Grammar, vocabulary, reading and writing."],
- ["🗣️","Kiswahili","Sarufi, fasihi, ufahamu na matumizi ya lugha."],
- ["🌍","Geography","Mazingira, hali ya hewa, ramani na shughuli za binadamu."],
- ["🏛️","History","Historia ya Afrika, Tanzania na dunia."]
+const S=[
+["Mathematics","➗",[
+["Numbers and operations","Namba ni msingi wa hesabu. Integers hujumuisha namba hasi, sifuri na chanya. Fuata mpangilio wa operations: mabano, powers, kuzidisha/kugawanya, kujumlisha/kutoa.","Mfano: 8 + 3 × 2 = 14."],
+["Fractions and percentages","Fraction huonyesha sehemu ya kitu kizima. Tafuta common denominator kabla ya kujumlisha fractions tofauti. Percentage ni sehemu kwa mia.","1/2 = 0.5 = 50%."],
+["Algebra","Algebra hutumia herufi kuwakilisha namba. Unganisha like terms na tumia inverse operations kutatua equation.","x + 5 = 12, hivyo x = 7."],
+["Geometry","Geometry huchunguza maumbo, pembe, perimeter na area. Jumla ya pembe za pembetatu ni 180°.","Area ya rectangle = length × width."],
+["Statistics","Mean ni jumla ya data gawanya kwa idadi; median ni thamani ya katikati; mode ni thamani inayojirudia zaidi.","Panga data kabla ya kutafuta median."]]],
+["Biology","🧬",[
+["Introduction to Biology","Biology ni sayansi ya viumbe hai. Sifa za viumbe ni nutrition, respiration, growth, excretion, reproduction, sensitivity na movement.","Biology husaidia afya, kilimo na uhifadhi wa mazingira."],
+["Cell structure","Cell ni kitengo cha msingi cha kiumbe hai. Cell membrane hudhibiti vitu; cytoplasm ni mahali pa shughuli; nucleus hudhibiti seli.","Plant cell ina cell wall na chloroplast; animal cell haina."],
+["Nutrition","Nutrition ni upatikanaji na matumizi ya chakula. Photosynthesis hutumia mwanga, maji na carbon dioxide kutengeneza glucose.","Carbon dioxide + water → glucose + oxygen (mwanga/chlorophyll)."],
+["Respiration","Respiration huachia nishati kutoka kwenye chakula. Aerobic respiration hutumia oxygen na kutoa carbon dioxide, maji na nishati.","Hutokea ndani ya seli."],
+["Ecology","Ecology huchunguza mahusiano ya viumbe na mazingira. Food chain huonyesha mtiririko wa nishati.","Producer hutengeneza chakula; consumer hula viumbe wengine."]]],
+["Physics","⚛️",[
+["Measurement","Physics huchunguza matter na energy. SI units ni metre (m), kilogram (kg), second (s) na kelvin (K).","Tumia instrument na unit sahihi."],
+["Force and motion","Force ni push au pull. Speed = distance ÷ time. Acceleration ni mabadiliko ya velocity kwa muda.","100 m ÷ 5 s = 20 m/s."],
+["Work and energy","Work hufanyika force inapohamisha kitu. Work = force × distance; power = work ÷ time.","Energy ni uwezo wa kufanya kazi."],
+["Heat","Joto husafiri kwa conduction, convection na radiation. Temperature hupima kiwango cha joto/baridi.","Metals ni conductors wazuri wa heat."],
+["Electricity","Current ni mtiririko wa charge. Ohm's law: V = I × R. Tumia umeme kwa usalama.","Usiguse waya wazi au soketi kwa mikono yenye maji."]]],
+["Chemistry","🧪",[
+["Introduction to Chemistry","Chemistry huchunguza matter, muundo, sifa na mabadiliko yake. Matter ina mass na huchukua space.","Fuata maelekezo ya usalama maabara."],
+["States of matter","Matter hupatikana kama solid, liquid au gas. Mabadiliko ni melting, freezing, evaporation na condensation.","Heating huongeza energy ya particles."],
+["Elements and compounds","Element ina aina moja ya atom. Compound ni elements zilizoungana kikemikali; mixture ni vitu vilivyochanganyika bila reaction.","Mixtures hutenganishwa kwa filtration au distillation."],
+["Atomic structure","Atom ina protons na neutrons kwenye nucleus na electrons kuzunguka nucleus. Atomic number ni idadi ya protons.","Electron ina charge hasi."],
+["Acids and bases","Acids na bases hutofautishwa kwa sifa na pH. Neutralisation hutengeneza salt na water.","Acid + base → salt + water."]]],
+["English","📖",[
+["Parts of speech","Main parts include nouns, pronouns, verbs, adjectives, adverbs, prepositions and conjunctions.","In 'She runs quickly', runs is a verb; quickly is an adverb."],
+["Tenses","Tense shows when an action happens: present, past or future.","I study; I studied; I will study."],
+["Sentence construction","A sentence expresses a complete thought and usually has a subject and verb. Begin with a capital letter and end with punctuation.","The learners are reading."],
+["Comprehension","Read carefully, identify the main idea, details, vocabulary from context and writer's purpose.","Base answers on evidence in the passage."],
+["Writing skills","Good writing has a purpose, organised paragraphs, correct grammar and suitable vocabulary.","Plan, draft, revise and proofread."]]],
+["Kiswahili","🗣️",[
+["Aina za maneno","Aina ni nomino, vitenzi, vivumishi, vielezi, viwakilishi, vihusishi, viunganishi na vihisishi.","'Mtoto anasoma haraka': mtoto ni nomino; anasoma ni kitenzi."],
+["Ngeli za nomino","Ngeli hupanga nomino kwa upatanisho wa kisarufi. Mifano M-WA (mtu/watu), M-MI (mti/miti), JI-MA (jicho/macho).","Upatanisho huonekana katika kitenzi na kivumishi."],
+["Fasihi simulizi","Fasihi simulizi huwasilishwa kwa mdomo. Vipera ni hadithi, methali, vitendawili, nyimbo na semi.","Hubeba maadili na maarifa ya jamii."],
+["Fasihi andishi","Fasihi andishi huwasilishwa kwa maandishi. Tanzu ni riwaya, tamthilia na ushairi.","Chambua dhamira, wahusika na mandhari."],
+["Uandishi na ufahamu","Uandishi mzuri huhitaji mpangilio wa mawazo, aya, sarufi na alama za uandishi.","Jibu maswali ya ufahamu kwa ushahidi wa kifungu."]]],
+["Geography","🌍",[
+["Introduction to Geography","Geography studies the earth, people, places and human-environment relationships. It has physical and human branches.","Skills include map reading and fieldwork."],
+["Solar system and Earth","Earth rotates on its axis and revolves around the Sun. Rotation causes day and night.","Earth's tilt and revolution influence seasons."],
+["Weather and climate","Weather is short-term atmospheric condition; climate is average weather over a long period.","Elements include rainfall, temperature, wind and humidity."],
+["Map reading","Map elements include title, scale, key, direction and grid references.","Scale compares map distance with ground distance."],
+["Environment","Resources include water, land, forests and minerals. Sustainable use protects resources for future generations.","Conservation includes tree planting and soil protection."]]],
+["History","🏛️",[
+["Meaning and sources of History","History studies human activities in the past. Sources include oral traditions, written records, archaeology and linguistics.","Compare sources and assess reliability."],
+["Early human life","Fossils and archaeological remains help explain early human life and adaptation to environments.","Stone tools and settlement remains are historical evidence."],
+["Agriculture and technology","Agriculture encouraged settled life, food production, population growth and trade.","Technology changed production methods."],
+["Trade and societies","Trade exchanged goods, ideas and skills between communities and encouraged growth of settlements.","Trade routes connected different regions."],
+["Colonialism and independence","Colonialism involved foreign control over territories. Africans responded through resistance, negotiation and nationalist movements.","Independence movements used political organisation and diplomacy."]]]
 ];
-const topics = {
- "Mathematics":["Numbers and basic operations","Fractions, decimals and percentages","Algebra: introduction"],
- "Biology":["Introduction to Biology","Classification of living things","The cell"],
- "Physics":["Introduction to Physics","Measurement","Force and motion"],
- "Chemistry":["Introduction to Chemistry","Laboratory safety","Matter and its states"],
- "English":["Parts of speech","Nouns and pronouns","Reading comprehension"],
- "Kiswahili":["Aina za maneno","Nomino na viwakilishi","Ufahamu"],
- "Geography":["Introduction to Geography","The solar system","Weather and climate"],
- "History":["Introduction to History","Sources of history","Evolution of man"]
+const Q={
+"Mathematics":[["What is 7 × 8?",["54","56","64"],1],["Solve x + 4 = 9.",["3","5","6"],1],["25% of 80 is:",["10","20","25"],1]],
+"Biology":[["Which part controls cell activities?",["Nucleus","Cell wall","Vacuole"],0],["Which process makes food in green plants?",["Respiration","Photosynthesis","Excretion"],1],["Aerobic respiration uses:",["Oxygen","Nitrogen","Helium"],0]],
+"Physics":[["SI unit of force is:",["Joule","Newton","Watt"],1],["Speed equals:",["Distance ÷ time","Time ÷ distance","Mass × volume"],0],["Unit of current is:",["Volt","Ampere","Ohm"],1]],
+"Chemistry":[["Symbol for oxygen is:",["Ox","O","Og"],1],["pH below 7 is usually:",["Acidic","Neutral","Alkaline"],0],["Negative particle is:",["Proton","Electron","Neutron"],1]],
+"English":[["Which is a verb?",["Quickly","Run","Beautiful"],1],["Past tense of go:",["Goed","Went","Going"],1],["A sentence begins with:",["Capital letter","Comma","Full stop"],0]],
+"Kiswahili":[["'Anakimbia' ni:",["Nomino","Kitenzi","Kivumishi"],1],["Wingi wa mtoto ni:",["Watoto","Mitoto","Matoto"],0],["Methali ni sehemu ya:",["Fasihi simulizi","Jiografia","Hisabati"],0]],
+"Geography":[["Instrument for temperature:",["Barometer","Thermometer","Rain gauge"],1],["Day and night result from:",["Rotation","Revolution","Rainfall"],0],["A map element is:",["Scale","Microscope","Test tube"],0]],
+"History":[["An archaeological source is:",["Fossil","Rumour","Guess"],0],["History studies:",["Past human activities","Future only","Weather only"],0],["Oral tradition is passed by:",["Speaking","Satellite","Calculator"],0]]
 };
-const homeView=document.getElementById("homeView");
-const subjectView=document.getElementById("subjectView");
-const classSelect=document.getElementById("classSelect");
-function showNotice(message){alert(message);}
-function openSubject(name){
- const item=subjects.find(s=>s[1]===name); if(!item)return;
- document.getElementById("subjectHeading").textContent=item[0]+" "+item[1];
- document.getElementById("classHeading").textContent="Darasa: "+classSelect.value;
- document.getElementById("subjectIntro").textContent=item[2]+" Notes za "+classSelect.value+" zitaonekana katika sehemu hii.";
- const list=document.getElementById("topicList"); list.replaceChildren();
- (topics[name]||[]).forEach((topic,i)=>{
-  const div=document.createElement("div"); div.className="topic";
-  const b=document.createElement("b"); b.textContent=(i+1)+". "+topic;
-  const p=document.createElement("p"); p.className="muted"; p.textContent="Maudhui ya mada hii yanaandaliwa.";
-  div.append(b,p); list.append(div);
- });
- homeView.hidden=true; subjectView.hidden=false; window.scrollTo(0,0);
-}
-function renderSubjects(){
- const box=document.getElementById("subjectsHome"); box.replaceChildren();
- subjects.forEach(s=>{
-  const row=document.createElement("div"); row.className="subject";
-  const label=document.createElement("span"); label.textContent=s[0]+" "+s[1];
-  const btn=document.createElement("button"); btn.type="button"; btn.textContent="Fungua";
-  btn.addEventListener("click",()=>openSubject(s[1]));
-  row.append(label,btn); box.append(row);
- });
-}
-renderSubjects();
-document.getElementById("lessonsBtn").addEventListener("click",()=>{
- document.getElementById("subjectsHome").scrollIntoView({behavior:"smooth",block:"center"});
-});
-document.getElementById("backBtn").addEventListener("click",()=>{
- subjectView.hidden=true; homeView.hidden=false; window.scrollTo(0,0);
-});
-classSelect.addEventListener("change",()=>{
- if(!subjectView.hidden) document.getElementById("classHeading").textContent="Darasa: "+classSelect.value;
-});
-document.getElementById("languageCard").addEventListener("click",()=>showNotice("Lugha ya Kiswahili na English itaongezewa katika hatua inayofuata."));
-document.getElementById("langBtn").addEventListener("click",()=>showNotice("Chaguo la kubadili lugha linaandaliwa."));
-if ("serviceWorker" in navigator) {
- window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js",{scope:"./"}).catch(err=>console.error(err)));
-}
-</script>
-</body>
-</html>
+const $=id=>document.getElementById(id);let active=null,questions=[],answers=[],qi=0;
+function page(title,html){$("home").classList.add("hidden");$("screen").classList.remove("hidden");$("crumb").textContent=title;$("content").innerHTML=html;scrollTo(0,0)}
+function home(){$("screen").classList.add("hidden");$("home").classList.remove("hidden");scrollTo(0,0)}
+function subjectList(){ $("subjects").innerHTML=S.map(s=>`<button class="tile" data-sub="${s[0]}"><span class="emoji">${s[1]}</span><b>${s[0]}</b><span class="muted">Form I–IV · mada 5</span></button>`).join("");document.querySelectorAll("[data-sub]").forEach(b=>b.onclick=()=>openSubject(b.dataset.sub));}
+function openSubject(name){active=S.find(s=>s[0]===name);page(name,`<p class="muted">${$("form").value} · Chagua mada kusoma.</p><div class="list">${active[2].map((t,i)=>`<div class="item"><span class="pill">${i+1}</span><button data-topic="${i}">${t[0]}</button>›</div>`).join("")}</div><p class="muted">Haya ni maelezo ya msingi ya kujifunzia. Tumia pia vitabu na mtaala rasmi wa shule.</p><button class="action" id="quizSubject">Fanya jaribio</button>`);document.querySelectorAll("[data-topic]").forEach(b=>b.onclick=()=>openTopic(+b.dataset.topic));$("quizSubject").onclick=()=>startQuiz(name);}
+function openTopic(i){let t=active[2][i];page(t[0],`<span class="pill">${$("form").value} · ${active[0]}</span><h2>${t[0]}</h2><div class="panel note"><b>Maelezo</b>\n${t[1]}\n\n<b>Mfano / Kumbuka</b>\n${t[2]}</div><br><button class="action alt" id="return">Rudi kwenye mada</button><button class="action" id="testTopic">Jipime</button>`);$("return").onclick=()=>openSubject(active[0]);$("testTopic").onclick=()=>startQuiz(active[0]);}
+function startQuiz(name){active=S.find(s=>s[0]===name);questions=Q[name];answers=Array(questions.length).fill(null);qi=0;drawQ();}
+function drawQ(){let q=questions[qi];page("Jaribio · "+active[0],`<p class="muted">${$("form").value} · Swali ${qi+1}/${questions.length}</p><div class="progress"><span style="width:${qi/questions.length*100}%"></span></div><h2>${q[0]}</h2>${q[1].map((a,i)=>`<button class="option ${answers[qi]===i?"selected":""}" data-a="${i}">${String.fromCharCode(65+i)}. ${a}</button>`).join("")}<br><button class="action alt" id="prev" ${qi===0?"disabled":""}>Nyuma</button> <button class="action" id="next">${qi===questions.length-1?"Maliza":"Endelea"}</button>`);document.querySelectorAll("[data-a]").forEach(b=>b.onclick=()=>{answers[qi]=+b.dataset.a;drawQ()});$("prev").onclick=()=>{if(qi){qi--;drawQ()}};$("next").onclick=()=>{if(answers[qi]===null){alert("Chagua jibu kwanza.");return}if(qi<questions.length-1){qi++;drawQ()}else finish()};}
+function finish(){let score=questions.reduce((n,q,i)=>n+(answers[i]===q[2]?1:0),0),r={date:new Date().toLocaleString(),form:$("form").value,subject:active[0],score,total:questions.length};let all=JSON.parse(localStorage.getItem("gandoResults")||"[]");all.unshift(r);localStorage.setItem("gandoResults",JSON.stringify(all.slice(0,100)));page("Matokeo",`<div class="panel"><h2>${score}/${questions.length} · ${Math.round(score/questions.length*100)}%</h2><p>Majibu sahihi: ${score} kati ya ${questions.length}.</p></div><h2>Majibu</h2>${questions.map((q,i)=>`<div class="item"><div><b>${i+1}. ${q[0]}</b><div class="muted">Jibu sahihi: ${q[1][q[2]]}</div></div></div>`).join("")}<br><button class="action" id="retry">Rudia</button>`);$("retry").onclick=()=>startQuiz(active[0]);}
+function exams(){page("Mitihani",`<p>Chagua somo la jaribio la mazoezi.</p><div class="list">${S.map(s=>`<div class="item"><b>${s[1]} ${s[0]}</b><button class="action" data-exam="${s[0]}">Anza</button></div>`).join("")}</div>`);document.querySelectorAll("[data-exam]").forEach(b=>b.onclick=()=>startQuiz(b.dataset.exam));}
+function results(){let a=JSON.parse(localStorage.getItem("gandoResults")||"[]");page("Matokeo",a.length?a.map(r=>`<div class="item"><div><b>${r.subject} · ${r.form}</b><div class="muted">${r.date}</div></div><span class="pill">${r.score}/${r.total}</span></div>`).join(""):`<div class="panel">Bado hujafanya jaribio.</div>`);}
+$("lessons").onclick=()=>page("Masomo",`<p>Chagua somo la ${$("form").value}.</p><div class="grid">${S.map(s=>`<button class="tile" data-pick="${s[0]}"><span class="emoji">${s[1]}</span><b>${s[0]}</b></button>`).join("")}</div>`),$("content").addEventListener("click",e=>{let b=e.target.closest("[data-pick]");if(b)openSubject(b.dataset.pick)});
+$("exams").onclick=exams;$("results").onclick=results;$("about").onclick=()=>page("Kuhusu",`<div class="panel note">Chagua darasa, fungua somo, chagua mada kusoma, kisha fanya jaribio. Alama huhifadhiwa kwenye browser ya kifaa hiki. Mfumo huu una muhtasari na maswali ya mazoezi ya mwanzo; si kitabu kamili wala uthibitisho wa mtaala rasmi.</div>`);
+$("back").onclick=home;$("search").addEventListener("change",e=>{let q=e.target.value.toLowerCase().trim();if(!q)return;let hits=[];S.forEach(s=>s[2].forEach((t,i)=>{if((s[0]+" "+t[0]+" "+t[1]).toLowerCase().includes(q))hits.push([s,i,t])}));if(hits.length){page("Utafutaji",hits.map(x=>`<div class="item"><div><b>${x[0][0]}</b><div class="muted">${x[2][0]}</div></div><button class="action" data-found="${x[0][0]}|${x[1]}">Fungua</button></div>`).join(""));document.querySelectorAll("[data-found]").forEach(b=>b.onclick=()=>{let [n,i]=b.dataset.found.split("|");active=S.find(s=>s[0]===n);openTopic(+i)})}});
+$("form").value=localStorage.getItem("gandoForm")||"Form I";$("form").onchange=()=>localStorage.setItem("gandoForm",$("form").value);subjectList();
+if("serviceWorker"in navigator)addEventListener("load",()=>navigator.serviceWorker.register("./sw.js",{scope:"./"}).catch(()=>{}));
+</script></body></html>
