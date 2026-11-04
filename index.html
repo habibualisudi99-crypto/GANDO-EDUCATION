@@ -3,7 +3,12 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#123b70"><meta name="description" content="GANDO EDUCATION - Jifunze, fanya mazoezi na jiandae kwa mitihani.">
-<link rel="manifest" href="manifest.webmanifest">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
+<link rel="apple-touch-icon" href="./icons/icon-192.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <title>GANDO EDUCATION</title>
 <style>
 :root{--blue:#123b70;--green:#17a66a;--bg:#f3f6fb;--ink:#17243a}
@@ -58,6 +63,11 @@ sw:{hero:"Karibu GANDO EDUCATION",tagline:"Jifunze leo, ongoza kesho.",chooseCla
 en:{hero:"Welcome to GANDO EDUCATION",tagline:"Learn today, lead tomorrow.",chooseClass:"Choose your class",lessons:"Lessons and Notes",lessonDesc:"Study different topics",tests:"Exams",testDesc:"Test yourself with questions",results:"Results",resultDesc:"Track your progress",languages:"Two languages",languageDesc:"Swahili and English",subjectsTitle:"Secondary School Subjects",contactTitle:"Contact us",contactText:"Have a question or need help? Message us on WhatsApp."}
 };
 let lang="sw";document.getElementById("langBtn").onclick=()=>{lang=lang==="sw"?"en":"sw";for(const [id,val] of Object.entries(translations[lang]))document.getElementById(id).textContent=val;document.documentElement.lang=lang;};
-if("serviceWorker" in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./sw.js", { scope: "./" })
+      .catch((error) => console.error("Service worker registration failed:", error));
+  });
+}
 </script>
 </body></html>
