@@ -1,265 +1,227 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GANDO EDUCATION V6</title>
-
+<title>GANDO EDUCATION | Zeko Jr</title>
 <style>
 *{box-sizing:border-box}
-body{
- margin:0;
- font-family:Arial,sans-serif;
- background:#f3f6fc;
- color:#17233d;
-}
-header{
- background:linear-gradient(135deg,#07152e,#123c70);
- color:white;
- padding:25px 15px;
- text-align:center;
- border-bottom:5px solid #e8b94d;
-}
-.logo{
- width:75px;height:75px;
- margin:auto auto 10px;
- border:3px solid #e8b94d;
- border-radius:22px;
- display:flex;align-items:center;
- justify-content:center;
- font-size:27px;font-weight:bold;
- color:#e8b94d;
- background:#10294d;
-}
-header h1{margin:5px;font-size:27px}
-header p{margin:7px;color:#dce8fa}
-nav{
- display:flex;flex-wrap:wrap;
- justify-content:center;
- gap:8px;padding:12px;
- background:#fff;
- position:sticky;top:0;z-index:5;
- box-shadow:0 3px 10px #0001;
-}
-button{
- border:0;border-radius:9px;
- padding:12px 16px;
- background:#123c70;color:white;
- font-weight:bold;cursor:pointer;
-}
-button:hover{background:#e0a82f;color:#07152e}
-main{max-width:950px;margin:auto;padding:18px}
-.panel{
- background:white;padding:20px;
- border-radius:15px;margin-bottom:18px;
- box-shadow:0 4px 15px #142b4b12;
-}
+body{margin:0;font-family:Arial,sans-serif;background:#f3f6fc;color:#182744}
+header{background:linear-gradient(135deg,#07152e,#174b80);color:white;text-align:center;padding:22px 12px;border-bottom:5px solid #e8b94d}
+.logo{width:180px;height:145px;margin:auto;display:block}
+header h1{margin:8px 0 4px;font-size:27px;letter-spacing:1px}
+header p{margin:6px;color:#e8c66f}
+nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;padding:12px;background:white;position:sticky;top:0;z-index:5;box-shadow:0 3px 10px #0001}
+button{background:#123c70;color:white;border:0;border-radius:9px;padding:12px 15px;font-weight:bold;cursor:pointer}
+button:hover{background:#e8b94d;color:#07152e}
+main{max-width:1000px;margin:auto;padding:15px}
+.panel{background:white;padding:19px;border-radius:14px;margin-bottom:16px;box-shadow:0 4px 14px #102c5010}
 h2{color:#123c70}
-h3{color:#b17d16}
-.cards{
- display:grid;
- grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
- gap:12px;
-}
-.card{
- background:#edf3fc;
- padding:18px 10px;
- text-align:center;
- border-radius:12px;
- border:1px solid #d9e4f3;
- cursor:pointer;font-weight:bold;
-}
-.card:hover{background:#dce9fa}
-.item{
- padding:13px;margin:9px 0;
- background:#f0f5fc;border-radius:9px;
- cursor:pointer;
-}
-.item:hover{background:#e1ebf8}
-input{
- width:100%;padding:12px;
- border:1px solid #ccd5e3;
- border-radius:8px;margin:8px 0;
-}
-.gold{color:#d39a27}
-footer{
- background:#07152e;color:white;
- text-align:center;padding:22px;
- border-top:4px solid #e8b94d;
-}
+h3{color:#bd861b}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:12px}
+.card{background:#edf3fc;border:1px solid #d8e4f4;border-radius:12px;padding:18px 10px;text-align:center;font-weight:bold;cursor:pointer}
+.card:hover{background:#dce9fa;transform:translateY(-2px)}
+.item{background:#f0f5fc;padding:14px;border-radius:9px;margin:9px 0;cursor:pointer}
+.item:hover{background:#dce9fa}
+input[type=radio]{width:auto;margin:8px}
+footer{background:#07152e;color:white;text-align:center;padding:24px;border-top:5px solid #e8b94d}
 footer strong{color:#e8b94d}
 a{color:#087c48;font-weight:bold}
-.small{color:#65748b;font-size:13px}
+.gold{color:#e8b94d}
+.back{margin-top:12px;background:#65748b}
+.small{font-size:13px;color:#718096}
 </style>
 </head>
-
 <body>
 
 <header>
- <div class="logo">GE</div>
- <h1>GANDO EDUCATION</h1>
- <p>Learn Today • Lead Tomorrow</p>
- <p class="gold"><b>QUALITY EDUCATION FOR EVERY STUDENT</b></p>
+<svg class="logo" viewBox="0 0 240 180" xmlns="http://www.w3.org/2000/svg">
+<rect x="8" y="8" width="224" height="164" rx="25" fill="#102d50" stroke="#e8b94d" stroke-width="4"/>
+<!-- Books -->
+<path d="M32 127 Q75 110 116 130 L116 151 Q75 132 32 150Z" fill="#e8b94d"/>
+<path d="M116 130 Q160 110 207 127 L207 150 Q160 132 116 151Z" fill="#fff"/>
+<path d="M116 130V151" stroke="#173c68" stroke-width="3"/>
+<path d="M43 122 L43 110 Q76 95 110 115" fill="none" stroke="#fff" stroke-width="5"/>
+<!-- Student one -->
+<circle cx="78" cy="55" r="19" fill="#9b603e"/>
+<path d="M59 52 Q60 28 81 32 Q99 34 97 51 Q82 42 59 52" fill="#202b3c"/>
+<path d="M51 111 Q51 76 78 76 Q105 76 105 111Z" fill="#e8b94d"/>
+<path d="M63 88 L77 102 L91 88" fill="none" stroke="#fff" stroke-width="4"/>
+<!-- Student two -->
+<circle cx="161" cy="55" r="19" fill="#b8794d"/>
+<path d="M142 51 Q143 29 163 32 Q181 34 180 51 Q161 43 142 51" fill="#202b3c"/>
+<path d="M134 111 Q134 76 161 76 Q188 76 188 111Z" fill="#4ca5d9"/>
+<path d="M147 88 L161 102 L175 88" fill="none" stroke="#fff" stroke-width="4"/>
+<!-- Book details -->
+<path d="M55 138 Q80 130 103 140 M130 140 Q155 130 184 138" fill="none" stroke="#173c68" stroke-width="2"/>
+<text x="120" y="20" text-anchor="middle" fill="#e8b94d" font-size="10" font-weight="bold">LEARN TO SUCCEED</text>
+</svg>
+<h1>GANDO EDUCATION</h1>
+<p>LEARN TODAY • LEAD TOMORROW</p>
+<p class="gold"><b>YOUR FUTURE STARTS HERE</b></p>
 </header>
 
 <nav>
- <button onclick="home()">HOME</button>
- <button onclick="classes()">CLASSES</button>
- <button onclick="subjects()">SUBJECTS</button>
- <button onclick="exams()">EXAMS</button>
- <button onclick="contact()">CONTACT</button>
+<button onclick="home()">HOME</button>
+<button onclick="classes()">CLASSES</button>
+<button onclick="subjects()">SUBJECTS</button>
+<button onclick="exams()">EXAMS</button>
+<button onclick="contact()">CONTACT</button>
 </nav>
 
 <main id="app"></main>
 
 <footer>
- <p>GANDO EDUCATION V6</p>
- <p>Designed for Learning and Success</p>
- <strong>Produced By Zeko Jr</strong>
+<p>GANDO EDUCATION</p>
+<p>Knowledge is the key to success.</p>
+<strong>Produced By Zeko Jr</strong>
 </footer>
 
 <script>
-const subjectList=[
+const subjectsList=[
 "Mathematics","Biology","Physics","Chemistry",
 "English","Kiswahili","Geography","History"
 ];
 
 const topics={
-Mathematics:["Numbers","Fractions","Algebra","Geometry","Statistics"],
-Biology:["Introduction to Biology","Cell Structure","Nutrition","Respiration","Reproduction"],
-Physics:["Introduction to Physics","Measurement","Force","Work and Energy","Light"],
-Chemistry:["Introduction to Chemistry","Matter","Elements","Mixtures","Acids and Bases"],
-English:["Grammar","Nouns","Pronouns","Tenses","Comprehension"],
-Kiswahili:["Sarufi","Nomino","Vitenzi","Uandishi","Fasihi"],
-Geography:["Introduction to Geography","Weather","Climate","Map Reading","Environment"],
-History:["Introduction to History","Sources of History","Early Man","Development of Agriculture","Trade"]
+"Mathematics":["Numbers","Fractions","Decimals","Algebra","Geometry","Measurements","Statistics","Ratio and Proportion"],
+"Biology":["Introduction to Biology","Cell Structure","Classification","Nutrition","Respiration","Transport","Reproduction","Ecology"],
+"Physics":["Introduction to Physics","Measurement","Force","Work and Energy","Light","Heat","Sound","Electricity"],
+"Chemistry":["Introduction to Chemistry","Matter","Elements","Compounds","Mixtures","Air","Water","Acids and Bases"],
+"English":["Nouns","Pronouns","Verbs","Adjectives","Tenses","Prepositions","Comprehension","Composition"],
+"Kiswahili":["Sarufi","Nomino","Vitenzi","Vivumishi","Vielezi","Ufahamu","Uandishi","Fasihi"],
+"Geography":["Introduction to Geography","The Solar System","Weather","Climate","Map Reading","Rocks","Soil","Environment"],
+"History":["Introduction to History","Sources of History","Evolution of Man","Agriculture","Trade","Technology","Colonialism","Independence"]
 };
 
+function show(html){
+document.getElementById("app").innerHTML=html;
+window.scrollTo(0,0);
+}
+
 function home(){
-document.getElementById("app").innerHTML=`
+show(`
 <section class="panel">
-<h2>Welcome to GANDO EDUCATION</h2>
-<p>Your learning journey starts here. Study different subjects, read notes and practise examination questions.</p>
+<h2>Welcome to GANDO EDUCATION 📚</h2>
+<p>Your digital learning platform. Choose your class, study subjects and practise examination questions.</p>
 <div class="cards">
-<div class="card" onclick="classes()">📚<br>Classes</div>
-<div class="card" onclick="subjects()">📖<br>Subjects</div>
-<div class="card" onclick="exams()">📝<br>Exams</div>
-<div class="card" onclick="contact()">☎️<br>Contact Us</div>
+<div class="card" onclick="classes()">📚<br>MY CLASSES</div>
+<div class="card" onclick="subjects()">📖<br>SUBJECTS</div>
+<div class="card" onclick="exams()">📝<br>EXAMINATION</div>
+<div class="card" onclick="contact()">☎️<br>CONTACT US</div>
 </div>
 </section>
 <section class="panel">
-<h2>Our Classes</h2>
+<h2>Choose Your Class</h2>
 <div class="cards">
-${[1,2,3,4].map(n=>`<div class="card" onclick="showClass(${n})">FORM ${n}</div>`).join("")}
+${[1,2,3,4].map(n=>`<div class="card" onclick="showClass(${n})">🎓<br>FORM ${n}</div>`).join("")}
 </div>
+</section>
+<section class="panel">
+<h2>Our Learning Mission</h2>
+<p>To support students through learning materials, revision and practice.</p>
 </section>
 <section class="panel">
 <h2>Contact Us</h2>
-<p>Need help? Contact us through WhatsApp.</p>
-<a href="https://wa.me/255716485776" target="_blank">WhatsApp: +255 716 485 776</a>
-</section>`;
+<p>WhatsApp: +255 716 485 776</p>
+<a href="https://wa.me/255716485776">CHAT WITH US ON WHATSAPP</a>
+</section>
+`);
 }
 
 function classes(){
-document.getElementById("app").innerHTML=`
-<section class="panel">
-<h2>Select Your Class</h2>
-<div class="cards">
-${[1,2,3,4].map(n=>`<div class="card" onclick="showClass(${n})">FORM ${n}</div>`).join("")}
-</div></section>`;
+show(`<section class="panel"><h2>Select Your Class</h2>
+<div class="cards">${[1,2,3,4].map(n=>`<div class="card" onclick="showClass(${n})">🎓<br>FORM ${n}</div>`).join("")}</div></section>`);
 }
 
 function showClass(n){
-document.getElementById("app").innerHTML=`
-<section class="panel">
-<h2>FORM ${n}</h2>
-<p>Select a subject to continue.</p>
-<div class="cards">
-${subjectList.map(s=>`<div class="card" onclick="showSubject('${s}',${n})">${s}</div>`).join("")}
-</div>
-</section>`;
+show(`<section class="panel"><h2>FORM ${n}</h2><p>Select a subject to continue.</p>
+<div class="cards">${subjectsList.map(s=>`<div class="card" onclick="showSubject('${s}',${n})">📘<br>${s}</div>`).join("")}</div>
+<button class="back" onclick="home()">Back Home</button></section>`);
 }
 
 function subjects(){
-document.getElementById("app").innerHTML=`
-<section class="panel">
-<h2>All Subjects</h2>
-<div class="cards">
-${subjectList.map(s=>`<div class="card" onclick="showSubject('${s}',1)">${s}</div>`).join("")}
-</div></section>`;
+show(`<section class="panel"><h2>All Subjects</h2>
+<div class="cards">${subjectsList.map(s=>`<div class="card" onclick="showSubject('${s}',1)">📘<br>${s}</div>`).join("")}</div></section>`);
 }
 
 function showSubject(s,n){
-document.getElementById("app").innerHTML=`
-<section class="panel">
-<h2>${s} — FORM ${n}</h2>
-<p>Select a topic to read its notes.</p>
-${topics[s].map((t,i)=>`<div class="item" onclick="showTopic('${s}',${i},${n})">📘 ${t}</div>`).join("")}
-<button onclick="showClass(${n})">Back to Subjects</button>
-</section>`;
+show(`<section class="panel"><h2>${s} — FORM ${n}</h2>
+<p>Choose a topic to study.</p>
+${topics[s].map((t,i)=>`<div class="item" onclick="showTopic('${s}',${i},${n})">📖 ${i+1}. ${t}</div>`).join("")}
+<button class="back" onclick="showClass(${n})">Back to Subjects</button></section>`);
 }
 
 function showTopic(s,i,n){
 let t=topics[s][i];
-document.getElementById("app").innerHTML=`
-<section class="panel">
-<h2>${s}</h2>
-<h3>${t}</h3>
-<p><b>Introduction:</b> This topic introduces important concepts in ${t.toLowerCase()}.</p>
-<p><b>Key points:</b></p>
+let intro={
+"Mathematics":"Mathematics is the study of numbers, shapes, patterns and calculations.",
+"Biology":"Biology is the scientific study of living things.",
+"Physics":"Physics is the study of matter, energy and their interactions.",
+"Chemistry":"Chemistry is the study of substances and how they change.",
+"English":"English helps us communicate through speaking, reading and writing.",
+"Kiswahili":"Kiswahili ni lugha inayotumika katika mawasiliano.",
+"Geography":"Geography is the study of the Earth and its environment.",
+"History":"History is the study of past human activities and events."
+};
+show(`<section class="panel">
+<h2>${s} — FORM ${n}</h2><h3>${t}</h3>
+<p><b>Introduction:</b> ${intro[s]}</p>
+<p><b>Key study points:</b></p>
 <ul>
-<li>Understand the meaning and basic principles of the topic.</li>
-<li>Learn important terms and definitions.</li>
-<li>Study examples and practise applying the concepts.</li>
-<li>Revise regularly and answer questions.</li>
+<li>Understand the meaning of ${t}.</li>
+<li>Learn the important terms and definitions.</li>
+<li>Study examples related to the topic.</li>
+<li>Write short notes and revise regularly.</li>
 </ul>
-<p><b>Study tip:</b> Write short notes and practise questions after every lesson.</p>
-<button onclick="showSubject('${s}',${n})">Back to Topics</button>
-</section>`;
+<p><b>Revision activity:</b> Write five things you have learned about ${t}.</p>
+<p class="small">Study material starter: add curriculum-specific explanations and examples as each topic is developed.</p>
+<button class="back" onclick="showSubject('${s}',${n})">Back to Topics</button>
+</section>`);
 }
 
+const questions=[
+{q:"What is 5 + 7?",a:["10","12","15"],c:1},
+{q:"Which organ pumps blood?",a:["Heart","Lungs","Kidney"],c:0},
+{q:"Which planet is called the Red Planet?",a:["Earth","Mars","Venus"],c:1},
+{q:"Water is made up of which elements?",a:["Hydrogen and oxygen","Iron and gold","Carbon and silver"],c:0},
+{q:"What is the opposite of hot?",a:["Warm","Cold","Dry"],c:1},
+{q:"Which gas do plants use during photosynthesis?",a:["Oxygen","Carbon dioxide","Nitrogen"],c:1},
+{q:"How many days are in a week?",a:["Five","Seven","Ten"],c:1},
+{q:"Which instrument measures temperature?",a:["Thermometer","Ruler","Clock"],c:0},
+{q:"What is the plural of child?",a:["Childs","Children","Childes"],c:1},
+{q:"Which is a source of historical information?",a:["Oral tradition","Calculator","Thermometer"],c:0}
+];
+
 function exams(){
-document.getElementById("app").innerHTML=`
-<section class="panel">
-<h2>Practice Examination</h2>
-<p>Answer these questions and check your score.</p>
+show(`<section class="panel"><h2>Practice Examination</h2>
+<p>Answer all questions, then press Submit Exam.</p>
 <div id="questions"></div>
 <button onclick="markExam()">SUBMIT EXAM</button>
-<p id="result"></p>
-</section>`;
-let qs=[
-["What is 5 + 7?",["10","12","15"],1],
-["Which organ pumps blood?",["Heart","Lungs","Kidney"],0],
-["What is the opposite of hot?",["Warm","Cold","Dry"],1],
-["Which planet is known as the Red Planet?",["Earth","Mars","Venus"],1],
-["Water is made up of which elements?",["Hydrogen and oxygen","Iron and carbon","Gold and silver"],0]
-];
-window.examQuestions=qs;
-document.getElementById("questions").innerHTML=qs.map((q,i)=>`
-<div class="item"><b>${i+1}. ${q[0]}</b><br>
-${q[1].map((a,j)=>`<label><input style="width:auto" type="radio" name="q${i}" value="${j}">${a}</label><br>`).join("")}
+<div id="result"></div></section>`);
+document.getElementById("questions").innerHTML=questions.map((q,i)=>`
+<div class="item"><b>${i+1}. ${q.q}</b><br>
+${q.a.map((a,j)=>`<label><input type="radio" name="q${i}" value="${j}">${a}</label><br>`).join("")}
 </div>`).join("");
 }
 
 function markExam(){
-let score=0;
-window.examQuestions.forEach((q,i)=>{
+let score=0,answered=0;
+questions.forEach((q,i)=>{
 let a=document.querySelector('input[name="q'+i+'"]:checked');
-if(a && Number(a.value)===q[2])score++;
+if(a){answered++;if(Number(a.value)===q.c)score++;}
 });
 document.getElementById("result").innerHTML=
-`<h3>Your Score: ${score} / ${window.examQuestions.length}</h3>`;
+`<h3>Your Score: ${score}/${questions.length}</h3><p>You answered ${answered} questions.</p><p>${score>=7?"Good work! Keep studying.":"Keep practising. You can improve!"}</p>`;
 }
 
 function contact(){
-document.getElementById("app").innerHTML=`
-<section class="panel">
-<h2>Contact GANDO EDUCATION</h2>
-<p>For questions and support, contact us:</p>
-<p><b>WhatsApp:</b> +255 716 485 776</p>
-<a href="https://wa.me/255716485776" target="_blank">
-<button>CHAT WITH US ON WHATSAPP</button></a>
-</section>`;
+show(`<section class="panel"><h2>Contact GANDO EDUCATION</h2>
+<p>For support and enquiries, contact us through WhatsApp.</p>
+<h3>+255 716 485 776</h3>
+<a href="https://wa.me/255716485776"><button>CHAT ON WHATSAPP</button></a>
+</section>`);
 }
 
 home();
