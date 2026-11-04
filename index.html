@@ -1,216 +1,267 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GANDO EDUCATION V5</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GANDO EDUCATION V6</title>
+
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#f3f6fc;color:#172554}
-header{background:linear-gradient(135deg,#071d49,#0879b9);color:white;text-align:center;padding:30px 15px}
-header h1{font-size:30px;margin:0;letter-spacing:1px}
-header p{margin:8px 0}
-nav{display:flex;flex-wrap:wrap;justify-content:center;background:#071d49;position:sticky;top:0;z-index:5}
-nav button{border:0;background:none;color:white;font-weight:bold;padding:14px 12px}
-main{max-width:900px;margin:auto;padding:15px}
-.panel{background:white;padding:20px;margin:14px 0;border-radius:15px;box-shadow:0 5px 18px #102b5012}
-h2{color:#07549a}
-h3{color:#0879b9}
-.item{display:block;width:100%;padding:15px;margin:9px 0;text-align:left;border:1px solid #d8e6f6;border-radius:10px;background:#edf5ff;color:#073b70;font-weight:bold}
-button{cursor:pointer}
-.action{background:linear-gradient(120deg,#0879b9,#07549a);color:white;border:0;border-radius:10px;padding:13px 19px;margin:5px;font-weight:bold}
-.whatsapp{display:block;text-align:center;text-decoration:none;background:#16a765;color:white;padding:16px;border-radius:12px;font-weight:bold;margin:15px 0}
-.hero{background:linear-gradient(135deg,#092c61,#0879b9);color:white;padding:24px;border-radius:15px}
-.hero h2{color:white}
-.feature{background:#edf5ff;border-radius:10px;padding:13px;margin:8px 0}
-.answer{display:block;padding:12px;margin:8px 0;background:#edf3fa;border-radius:8px}
-footer{background:#071d49;color:white;text-align:center;padding:25px 12px;margin-top:25px}
-footer a{color:#77e9b2}
-.small{font-size:13px;color:#64748b}
+body{
+ margin:0;
+ font-family:Arial,sans-serif;
+ background:#f3f6fc;
+ color:#17233d;
+}
+header{
+ background:linear-gradient(135deg,#07152e,#123c70);
+ color:white;
+ padding:25px 15px;
+ text-align:center;
+ border-bottom:5px solid #e8b94d;
+}
+.logo{
+ width:75px;height:75px;
+ margin:auto auto 10px;
+ border:3px solid #e8b94d;
+ border-radius:22px;
+ display:flex;align-items:center;
+ justify-content:center;
+ font-size:27px;font-weight:bold;
+ color:#e8b94d;
+ background:#10294d;
+}
+header h1{margin:5px;font-size:27px}
+header p{margin:7px;color:#dce8fa}
+nav{
+ display:flex;flex-wrap:wrap;
+ justify-content:center;
+ gap:8px;padding:12px;
+ background:#fff;
+ position:sticky;top:0;z-index:5;
+ box-shadow:0 3px 10px #0001;
+}
+button{
+ border:0;border-radius:9px;
+ padding:12px 16px;
+ background:#123c70;color:white;
+ font-weight:bold;cursor:pointer;
+}
+button:hover{background:#e0a82f;color:#07152e}
+main{max-width:950px;margin:auto;padding:18px}
+.panel{
+ background:white;padding:20px;
+ border-radius:15px;margin-bottom:18px;
+ box-shadow:0 4px 15px #142b4b12;
+}
+h2{color:#123c70}
+h3{color:#b17d16}
+.cards{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+ gap:12px;
+}
+.card{
+ background:#edf3fc;
+ padding:18px 10px;
+ text-align:center;
+ border-radius:12px;
+ border:1px solid #d9e4f3;
+ cursor:pointer;font-weight:bold;
+}
+.card:hover{background:#dce9fa}
+.item{
+ padding:13px;margin:9px 0;
+ background:#f0f5fc;border-radius:9px;
+ cursor:pointer;
+}
+.item:hover{background:#e1ebf8}
+input{
+ width:100%;padding:12px;
+ border:1px solid #ccd5e3;
+ border-radius:8px;margin:8px 0;
+}
+.gold{color:#d39a27}
+footer{
+ background:#07152e;color:white;
+ text-align:center;padding:22px;
+ border-top:4px solid #e8b94d;
+}
+footer strong{color:#e8b94d}
+a{color:#087c48;font-weight:bold}
+.small{color:#65748b;font-size:13px}
 </style>
 </head>
+
 <body>
+
 <header>
-<h1>GANDO EDUCATION</h1>
-<p>LEARN • PRACTICE • SUCCEED</p>
-<p>Your Future Starts With Education</p>
+ <div class="logo">GE</div>
+ <h1>GANDO EDUCATION</h1>
+ <p>Learn Today • Lead Tomorrow</p>
+ <p class="gold"><b>QUALITY EDUCATION FOR EVERY STUDENT</b></p>
 </header>
+
 <nav>
-<button onclick="home()">HOME</button>
-<button onclick="classes()">CLASSES</button>
-<button onclick="subjects()">SUBJECTS</button>
-<button onclick="exam()">EXAMS</button>
-<button onclick="contact()">CONTACT US</button>
+ <button onclick="home()">HOME</button>
+ <button onclick="classes()">CLASSES</button>
+ <button onclick="subjects()">SUBJECTS</button>
+ <button onclick="exams()">EXAMS</button>
+ <button onclick="contact()">CONTACT</button>
 </nav>
+
 <main id="app"></main>
+
 <footer>
-<h3 style="color:white">GANDO EDUCATION</h3>
-<p>Produced By Zeko Jr</p>
-<p>Contact: +255 716 485 776</p>
-<a href="https://wa.me/255716485776">Chat on WhatsApp</a>
+ <p>GANDO EDUCATION V6</p>
+ <p>Designed for Learning and Success</p>
+ <strong>Produced By Zeko Jr</strong>
 </footer>
+
 <script>
-const curriculum={
-"Mathematics":["Numbers","Fractions","Decimals","Percentages","Algebra","Geometry","Statistics","Equations","Ratio and Proportion","Sets","Graphs","Mensuration"],
-"Biology":["Introduction to Biology","Classification","Cell Structure","Nutrition","Transport","Respiration","Reproduction","Ecology","Excretion","Coordination","Growth","Health"],
-"Physics":["Introduction to Physics","Measurement","Force","Work Energy and Power","Light","Sound","Heat","Electricity","Pressure","Motion","Magnetism","Waves"],
-"Chemistry":["Introduction to Chemistry","Laboratory Safety","Matter","Elements and Compounds","Air","Water","Acids and Bases","Chemical Reactions","Atomic Structure","Periodic Table","Mixtures","Metals"],
-"English":["Parts of Speech","Nouns","Pronouns","Verbs","Tenses","Adjectives","Adverbs","Writing Skills","Comprehension","Active and Passive Voice","Reported Speech","Vocabulary"],
-"Kiswahili":["Sarufi","Nomino","Vitenzi","Vivumishi","Vielezi","Ufahamu","Insha","Fasihi","Methali","Nahau","Uandishi","Ushairi"],
-"Geography":["Introduction to Geography","The Solar System","Weather","Climate","Map Reading","Rocks","Soil","Environmental Conservation","The Earth","Volcanoes","Population","Agriculture"],
-"History":["Introduction to History","Sources of History","Evolution of Man","Early Stone Age","Development of Agriculture","Iron Technology","Trade","Colonialism","Slave Trade","Nationalism","Independence","African Societies"]
-};
-const notes={
-"Numbers":"Numbers are symbols used for counting and measuring. Types include natural numbers, whole numbers, integers and rational numbers. Example: 12 + 8 = 20.",
-"Fractions":"A fraction represents part of a whole. It has a numerator and denominator. Example: 1/2 + 1/2 = 1.",
-"Decimals":"Decimals are numbers written using a decimal point. Example: 0.5 + 0.25 = 0.75.",
-"Percentages":"Percentage means a number out of one hundred. Example: 20% of 100 = 20.",
-"Algebra":"Algebra uses letters to represent unknown numbers. Example: x + 5 = 9, therefore x = 4.",
-"Geometry":"Geometry is the study of shapes, sizes and positions. A triangle has three sides.",
-"Statistics":"Statistics involves collecting, organising and interpreting data. Mean = total of values divided by number of values.",
-"Equations":"An equation is a mathematical statement showing equality. Example: 2x = 10, so x = 5.",
-"Introduction to Biology":"Biology is the scientific study of living organisms. Living things grow, reproduce, respire and respond to stimuli.",
-"Classification":"Classification is grouping organisms according to similarities and differences.",
-"Cell Structure":"A cell is the basic structural and functional unit of life. Main parts include the cell membrane, cytoplasm and nucleus.",
-"Nutrition":"Nutrition is the process by which organisms obtain and use food. Green plants make food through photosynthesis.",
-"Transport":"Transport is the movement of substances within an organism. Xylem transports water while phloem transports food.",
-"Respiration":"Respiration is the process of releasing energy from food. Aerobic respiration uses oxygen.",
-"Reproduction":"Reproduction is the process by which living organisms produce new individuals of their own kind.",
-"Ecology":"Ecology is the study of relationships between organisms and their environment.",
-"Introduction to Physics":"Physics is the study of matter, energy, forces and their interactions.",
-"Measurement":"Measurement is comparing a quantity with a standard unit. SI units include metre, kilogram and second.",
-"Force":"Force is a push or pull that can change an object's motion or shape. Its SI unit is newton.",
-"Work Energy and Power":"Work is done when a force moves an object. Energy is the ability to do work. Power is the rate of doing work.",
-"Light":"Light is a form of energy that enables us to see. It travels in straight lines in a uniform medium.",
-"Sound":"Sound is produced by vibrations and travels through a medium.",
-"Heat":"Heat is energy transferred from a hotter body to a colder body because of temperature difference.",
-"Electricity":"Electricity involves electric charges. Electric current is measured in amperes.",
-"Introduction to Chemistry":"Chemistry is the study of matter, its properties, composition and changes.",
-"Laboratory Safety":"Follow instructions, wear protective equipment and never taste laboratory chemicals.",
-"Matter":"Matter is anything that has mass and occupies space. Common states are solid, liquid and gas.",
-"Elements and Compounds":"An element contains one type of atom. A compound contains two or more elements chemically combined.",
-"Air":"Air is a mixture of gases. Nitrogen and oxygen are its main components.",
-"Water":"Water is a compound made of hydrogen and oxygen. Its chemical formula is H2O.",
-"Acids and Bases":"Acids have pH below 7, bases have pH above 7, while neutral solutions have pH 7.",
-"Chemical Reactions":"A chemical reaction changes reactants into new substances called products.",
-"Parts of Speech":"Parts of speech are groups of words according to their functions. Examples include nouns, verbs and adjectives.",
-"Nouns":"A noun is a naming word for a person, place, thing or idea. Examples: teacher, school and book.",
-"Pronouns":"A pronoun replaces a noun. Examples include he, she, it, we and they.",
-"Verbs":"A verb expresses an action or state. Examples: run, write, eat and sleep.",
-"Tenses":"Tenses show the time of an action. Main forms include present, past and future.",
-"Adjectives":"An adjective describes a noun. Example: She has a beautiful dress.",
-"Adverbs":"An adverb describes a verb, adjective or another adverb. Example: She runs quickly.",
-"Writing Skills":"Good writing uses clear sentences, correct grammar, punctuation and organised paragraphs.",
-"Sarufi":"Sarufi ni kanuni zinazotawala matumizi sahihi ya lugha. Husaidia kujenga sentensi sahihi.",
-"Nomino":"Nomino ni maneno yanayotaja watu, vitu, mahali au hali. Mfano: mtoto, shule na kalamu.",
-"Vitenzi":"Vitenzi ni maneno yanayoonyesha tendo au hali. Mfano: kula, soma na lala.",
-"Vivumishi":"Vivumishi ni maneno yanayoeleza sifa za nomino. Mfano: mtoto mzuri.",
-"Vielezi":"Vielezi hufafanua zaidi tendo au hali. Mfano: anakimbia haraka.",
-"Ufahamu":"Ufahamu ni uwezo wa kusoma habari na kuelewa ujumbe wake.",
-"Insha":"Insha ni maandishi yanayowasilisha mawazo kuhusu mada fulani.",
-"Fasihi":"Fasihi ni sanaa ya lugha inayotumia maneno kueleza maisha ya jamii.",
-"Introduction to Geography":"Geography is the study of the Earth, its features, people and environment.",
-"The Solar System":"The solar system consists of the Sun and objects that orbit it, including eight planets.",
-"Weather":"Weather is the condition of the atmosphere at a particular place and time.",
-"Climate":"Climate is the average weather condition of a place over a long period.",
-"Map Reading":"A map is a representation of an area on a flat surface. It uses symbols, direction and scale.",
-"Rocks":"Rocks are natural solid materials that form part of the Earth's crust.",
-"Soil":"Soil is the upper layer of the Earth that supports plant growth.",
-"Environmental Conservation":"Environmental conservation means protecting natural resources and reducing pollution.",
-"Introduction to History":"History is the study of past human activities and events.",
-"Sources of History":"Sources of history include oral traditions, written records, archaeology and archives.",
-"Evolution of Man":"Human evolution describes changes in human ancestors over millions of years.",
-"Early Stone Age":"The Early Stone Age is the earliest period of human tool-making, when people mainly used simple stone tools.",
-"Development of Agriculture":"Agriculture is the growing of crops and keeping of animals for food and other products.",
-"Iron Technology":"Iron technology involved making tools and weapons from iron, improving farming and production.",
-"Trade":"Trade is the exchange of goods and services between people or communities.",
-"Colonialism":"Colonialism is the control of one territory by another power for political and economic purposes."
-};
-let selectedClass="Form I",selectedSubject="";
-const questions=[
-{q:"What is Biology?",a:["Study of living things","Study of numbers","Study of rocks"],c:0},
-{q:"What is the SI unit of force?",a:["Metre","Newton","Kilogram"],c:1},
-{q:"What is the chemical formula of water?",a:["CO2","O2","H2O"],c:2},
-{q:"What is 25% of 200?",a:["25","50","75"],c:1},
-{q:"Which word is a noun?",a:["Run","Beautiful","Teacher"],c:2},
-{q:"Weather refers to atmospheric conditions over:",a:["A short time","Thirty years only","A century"],c:0},
-{q:"History studies:",a:["Future events","Past human activities","Only animals"],c:1},
-{q:"A cell is the basic unit of:",a:["Life","Weather","Rocks"],c:0},
-{q:"Which planet is closest to the Sun?",a:["Earth","Mercury","Mars"],c:1},
-{q:"What is 2 x 8?",a:["10","16","18"],c:1}
+const subjectList=[
+"Mathematics","Biology","Physics","Chemistry",
+"English","Kiswahili","Geography","History"
 ];
+
+const topics={
+Mathematics:["Numbers","Fractions","Algebra","Geometry","Statistics"],
+Biology:["Introduction to Biology","Cell Structure","Nutrition","Respiration","Reproduction"],
+Physics:["Introduction to Physics","Measurement","Force","Work and Energy","Light"],
+Chemistry:["Introduction to Chemistry","Matter","Elements","Mixtures","Acids and Bases"],
+English:["Grammar","Nouns","Pronouns","Tenses","Comprehension"],
+Kiswahili:["Sarufi","Nomino","Vitenzi","Uandishi","Fasihi"],
+Geography:["Introduction to Geography","Weather","Climate","Map Reading","Environment"],
+History:["Introduction to History","Sources of History","Early Man","Development of Agriculture","Trade"]
+};
+
 function home(){
 document.getElementById("app").innerHTML=`
-<div class="hero"><h2>Welcome to GANDO EDUCATION</h2>
-<p>Learn today. Lead tomorrow.</p>
-<button class="action" onclick="classes()">START LEARNING</button>
-<button class="action" onclick="exam()">TAKE EXAM</button></div>
-<div class="panel"><h2>Our Education Services</h2>
-<div class="feature">📚 Classes: Form I – Form IV</div>
-<div class="feature">📖 Eight school subjects</div>
-<div class="feature">✍️ Topic notes and revision points</div>
-<div class="feature">📝 Practice examinations and results</div>
+<section class="panel">
+<h2>Welcome to GANDO EDUCATION</h2>
+<p>Your learning journey starts here. Study different subjects, read notes and practise examination questions.</p>
+<div class="cards">
+<div class="card" onclick="classes()">📚<br>Classes</div>
+<div class="card" onclick="subjects()">📖<br>Subjects</div>
+<div class="card" onclick="exams()">📝<br>Exams</div>
+<div class="card" onclick="contact()">☎️<br>Contact Us</div>
 </div>
-<div class="panel"><h2>CONTACT US</h2>
-<p>Need help? Talk to us directly on WhatsApp.</p>
-<p><b>Phone: +255 716 485 776</b></p>
-<a class="whatsapp" href="https://wa.me/255716485776?text=Hello%20GANDO%20EDUCATION" target="_blank">🟢 CHAT WITH US ON WHATSAPP</a>
-</div>`;
+</section>
+<section class="panel">
+<h2>Our Classes</h2>
+<div class="cards">
+${[1,2,3,4].map(n=>`<div class="card" onclick="showClass(${n})">FORM ${n}</div>`).join("")}
+</div>
+</section>
+<section class="panel">
+<h2>Contact Us</h2>
+<p>Need help? Contact us through WhatsApp.</p>
+<a href="https://wa.me/255716485776" target="_blank">WhatsApp: +255 716 485 776</a>
+</section>`;
 }
+
 function classes(){
-document.getElementById("app").innerHTML=`<div class="panel"><h2>Select Your Class</h2>
-${["Form I","Form II","Form III","Form IV"].map(c=>`<button class="item" onclick="selectClass('${c}')">${c}</button>`).join("")}</div>`;
+document.getElementById("app").innerHTML=`
+<section class="panel">
+<h2>Select Your Class</h2>
+<div class="cards">
+${[1,2,3,4].map(n=>`<div class="card" onclick="showClass(${n})">FORM ${n}</div>`).join("")}
+</div></section>`;
 }
-function selectClass(c){selectedClass=c;subjects()}
+
+function showClass(n){
+document.getElementById("app").innerHTML=`
+<section class="panel">
+<h2>FORM ${n}</h2>
+<p>Select a subject to continue.</p>
+<div class="cards">
+${subjectList.map(s=>`<div class="card" onclick="showSubject('${s}',${n})">${s}</div>`).join("")}
+</div>
+</section>`;
+}
+
 function subjects(){
-document.getElementById("app").innerHTML=`<div class="panel"><h2>${selectedClass} - Subjects</h2>
-${Object.keys(curriculum).map(s=>`<button class="item" onclick="topics('${s}')">${s}</button>`).join("")}
-<button class="action" onclick="classes()">Back</button></div>`;
+document.getElementById("app").innerHTML=`
+<section class="panel">
+<h2>All Subjects</h2>
+<div class="cards">
+${subjectList.map(s=>`<div class="card" onclick="showSubject('${s}',1)">${s}</div>`).join("")}
+</div></section>`;
 }
-function topics(s){
-selectedSubject=s;
-document.getElementById("app").innerHTML=`<div class="panel"><h2>${s} - ${selectedClass}</h2>
-<p>Select a topic:</p>
-${curriculum[s].map(t=>`<button class="item" onclick="note('${t}')">${t}</button>`).join("")}
-<button class="action" onclick="subjects()">Back</button></div>`;
+
+function showSubject(s,n){
+document.getElementById("app").innerHTML=`
+<section class="panel">
+<h2>${s} — FORM ${n}</h2>
+<p>Select a topic to read its notes.</p>
+${topics[s].map((t,i)=>`<div class="item" onclick="showTopic('${s}',${i},${n})">📘 ${t}</div>`).join("")}
+<button onclick="showClass(${n})">Back to Subjects</button>
+</section>`;
 }
-function note(t){
-let explanation=notes[t]||`${t} is an important topic in ${selectedSubject}. Study its meaning, main principles, characteristics, examples and applications. Use your class textbook and teacher's guidance to develop a deeper understanding.`;
-document.getElementById("app").innerHTML=`<div class="panel">
-<h2>${t}</h2><p>${explanation}</p>
-<h3>Revision Points</h3>
-<ul><li>Understand the definition of the topic.</li>
-<li>Learn the important facts and principles.</li>
-<li>Study examples and applications.</li>
-<li>Practise questions to test your understanding.</li></ul>
-<button class="action" onclick="topics('${selectedSubject}')">Back to Topics</button>
-</div>`;
+
+function showTopic(s,i,n){
+let t=topics[s][i];
+document.getElementById("app").innerHTML=`
+<section class="panel">
+<h2>${s}</h2>
+<h3>${t}</h3>
+<p><b>Introduction:</b> This topic introduces important concepts in ${t.toLowerCase()}.</p>
+<p><b>Key points:</b></p>
+<ul>
+<li>Understand the meaning and basic principles of the topic.</li>
+<li>Learn important terms and definitions.</li>
+<li>Study examples and practise applying the concepts.</li>
+<li>Revise regularly and answer questions.</li>
+</ul>
+<p><b>Study tip:</b> Write short notes and practise questions after every lesson.</p>
+<button onclick="showSubject('${s}',${n})">Back to Topics</button>
+</section>`;
 }
-function exam(){
-document.getElementById("app").innerHTML=`<div class="panel"><h2>${selectedClass} - Practice Examination</h2>
-<p>Answer all questions and submit to see your score.</p>
-<form id="quiz">
-${questions.map((q,i)=>`<div class="panel"><b>${i+1}. ${q.q}</b>
-${q.a.map((a,j)=>`<label class="answer"><input type="radio" name="q${i}" value="${j}">${a}</label>`).join("")}</div>`).join("")}
-<button class="action" type="submit">SUBMIT EXAM</button>
-</form><div id="result"></div></div>`;
-document.getElementById("quiz").onsubmit=function(e){
-e.preventDefault();let score=0;
-questions.forEach((q,i)=>{
-let answer=document.querySelector('input[name="q'+i+'"]:checked');
-if(answer&&Number(answer.value)===q.c)score++;
+
+function exams(){
+document.getElementById("app").innerHTML=`
+<section class="panel">
+<h2>Practice Examination</h2>
+<p>Answer these questions and check your score.</p>
+<div id="questions"></div>
+<button onclick="markExam()">SUBMIT EXAM</button>
+<p id="result"></p>
+</section>`;
+let qs=[
+["What is 5 + 7?",["10","12","15"],1],
+["Which organ pumps blood?",["Heart","Lungs","Kidney"],0],
+["What is the opposite of hot?",["Warm","Cold","Dry"],1],
+["Which planet is known as the Red Planet?",["Earth","Mars","Venus"],1],
+["Water is made up of which elements?",["Hydrogen and oxygen","Iron and carbon","Gold and silver"],0]
+];
+window.examQuestions=qs;
+document.getElementById("questions").innerHTML=qs.map((q,i)=>`
+<div class="item"><b>${i+1}. ${q[0]}</b><br>
+${q[1].map((a,j)=>`<label><input style="width:auto" type="radio" name="q${i}" value="${j}">${a}</label><br>`).join("")}
+</div>`).join("");
+}
+
+function markExam(){
+let score=0;
+window.examQuestions.forEach((q,i)=>{
+let a=document.querySelector('input[name="q'+i+'"]:checked');
+if(a && Number(a.value)===q[2])score++;
 });
-document.getElementById("result").innerHTML=`<div class="panel"><h2>Exam Results</h2><h1>${score}/${questions.length}</h1><p>Percentage: ${score*10}%</p><p>${score>=7?"Excellent work! Keep it up.":"Keep practising. You can improve!"}</p><button class="action" onclick="exam()">TRY AGAIN</button></div>`;
-};
+document.getElementById("result").innerHTML=
+`<h3>Your Score: ${score} / ${window.examQuestions.length}</h3>`;
 }
+
 function contact(){
-document.getElementById("app").innerHTML=`<div class="panel"><h2>CONTACT US</h2>
-<p>GANDO EDUCATION support</p>
-<p><b>WhatsApp: +255 716 485 776</b></p>
-<a class="whatsapp" href="https://wa.me/255716485776?text=Hello%20GANDO%20EDUCATION" target="_blank">CHAT ON WHATSAPP</a>
-</div>`;
+document.getElementById("app").innerHTML=`
+<section class="panel">
+<h2>Contact GANDO EDUCATION</h2>
+<p>For questions and support, contact us:</p>
+<p><b>WhatsApp:</b> +255 716 485 776</p>
+<a href="https://wa.me/255716485776" target="_blank">
+<button>CHAT WITH US ON WHATSAPP</button></a>
+</section>`;
 }
+
 home();
 </script>
 </body>
