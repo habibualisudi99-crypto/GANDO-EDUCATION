@@ -4,46 +4,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GANDO EDUCATION V4</title>
+<title>GANDO EDUCATION V5</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#eef3f9;color:#172b4d}
-header{background:#073b70;color:white;text-align:center;padding:25px 12px}
-header h1{margin:0;font-size:27px}
-nav{display:flex;flex-wrap:wrap;justify-content:center;background:#05284d}
-nav button{background:none;border:0;color:white;padding:14px;font-weight:bold}
-main{max-width:900px;margin:auto;padding:14px}
-.panel{background:white;padding:17px;margin:13px 0;border-radius:12px;box-shadow:0 2px 9px #0001}
+body{margin:0;font-family:Arial,sans-serif;background:#f3f6fc;color:#172554}
+header{background:linear-gradient(135deg,#071d49,#0879b9);color:white;text-align:center;padding:30px 15px}
+header h1{font-size:30px;margin:0;letter-spacing:1px}
+header p{margin:8px 0}
+nav{display:flex;flex-wrap:wrap;justify-content:center;background:#071d49;position:sticky;top:0;z-index:5}
+nav button{border:0;background:none;color:white;font-weight:bold;padding:14px 12px}
+main{max-width:900px;margin:auto;padding:15px}
+.panel{background:white;padding:20px;margin:14px 0;border-radius:15px;box-shadow:0 5px 18px #102b5012}
 h2{color:#07549a}
-.item{display:block;width:100%;padding:14px;margin:8px 0;text-align:left;border:0;border-radius:8px;background:#e5effb;color:#073b70;font-weight:bold}
+h3{color:#0879b9}
+.item{display:block;width:100%;padding:15px;margin:9px 0;text-align:left;border:1px solid #d8e6f6;border-radius:10px;background:#edf5ff;color:#073b70;font-weight:bold}
 button{cursor:pointer}
-.action{background:#0872c4;color:white;border:0;border-radius:8px;padding:12px 17px;margin:5px}
-.green{background:#168b51}
-.answer{display:block;padding:11px;margin:8px 0;background:#edf3fa;border-radius:8px}
-input[type=radio]{margin-right:8px}
-footer{background:#05284d;color:white;text-align:center;padding:20px;margin-top:25px}
-a{color:inherit}
-.small{color:#64748b;font-size:13px}
+.action{background:linear-gradient(120deg,#0879b9,#07549a);color:white;border:0;border-radius:10px;padding:13px 19px;margin:5px;font-weight:bold}
+.whatsapp{display:block;text-align:center;text-decoration:none;background:#16a765;color:white;padding:16px;border-radius:12px;font-weight:bold;margin:15px 0}
+.hero{background:linear-gradient(135deg,#092c61,#0879b9);color:white;padding:24px;border-radius:15px}
+.hero h2{color:white}
+.feature{background:#edf5ff;border-radius:10px;padding:13px;margin:8px 0}
+.answer{display:block;padding:12px;margin:8px 0;background:#edf3fa;border-radius:8px}
+footer{background:#071d49;color:white;text-align:center;padding:25px 12px;margin-top:25px}
+footer a{color:#77e9b2}
+.small{font-size:13px;color:#64748b}
 </style>
 </head>
 <body>
 <header>
 <h1>GANDO EDUCATION</h1>
 <p>LEARN • PRACTICE • SUCCEED</p>
-<p>Quality Education for Every Student</p>
+<p>Your Future Starts With Education</p>
 </header>
 <nav>
 <button onclick="home()">HOME</button>
 <button onclick="classes()">CLASSES</button>
 <button onclick="subjects()">SUBJECTS</button>
 <button onclick="exam()">EXAMS</button>
-<button onclick="contact()">CONTACT</button>
+<button onclick="contact()">CONTACT US</button>
 </nav>
 <main id="app"></main>
 <footer>
-<p><b>GANDO EDUCATION</b></p>
+<h3 style="color:white">GANDO EDUCATION</h3>
 <p>Produced By Zeko Jr</p>
-<p>WhatsApp: +255 716 485 776</p>
+<p>Contact: +255 716 485 776</p>
+<a href="https://wa.me/255716485776">Chat on WhatsApp</a>
 </footer>
 <script>
 const curriculum={
@@ -56,7 +61,7 @@ const curriculum={
 "Geography":["Introduction to Geography","The Solar System","Weather","Climate","Map Reading","Rocks","Soil","Environmental Conservation","The Earth","Volcanoes","Population","Agriculture"],
 "History":["Introduction to History","Sources of History","Evolution of Man","Early Stone Age","Development of Agriculture","Iron Technology","Trade","Colonialism","Slave Trade","Nationalism","Independence","African Societies"]
 };
-const explanations={
+const notes={
 "Numbers":"Numbers are symbols used for counting and measuring. Types include natural numbers, whole numbers, integers and rational numbers. Example: 12 + 8 = 20.",
 "Fractions":"A fraction represents part of a whole. It has a numerator and denominator. Example: 1/2 + 1/2 = 1.",
 "Decimals":"Decimals are numbers written using a decimal point. Example: 0.5 + 0.25 = 0.75.",
@@ -66,10 +71,10 @@ const explanations={
 "Statistics":"Statistics involves collecting, organising and interpreting data. Mean = total of values divided by number of values.",
 "Equations":"An equation is a mathematical statement showing equality. Example: 2x = 10, so x = 5.",
 "Introduction to Biology":"Biology is the scientific study of living organisms. Living things grow, reproduce, respire and respond to stimuli.",
-"Classification":"Classification is grouping organisms according to similarities and differences. It makes identification easier.",
+"Classification":"Classification is grouping organisms according to similarities and differences.",
 "Cell Structure":"A cell is the basic structural and functional unit of life. Main parts include the cell membrane, cytoplasm and nucleus.",
 "Nutrition":"Nutrition is the process by which organisms obtain and use food. Green plants make food through photosynthesis.",
-"Transport":"Transport is the movement of substances within an organism. In plants, xylem transports water while phloem transports food.",
+"Transport":"Transport is the movement of substances within an organism. Xylem transports water while phloem transports food.",
 "Respiration":"Respiration is the process of releasing energy from food. Aerobic respiration uses oxygen.",
 "Reproduction":"Reproduction is the process by which living organisms produce new individuals of their own kind.",
 "Ecology":"Ecology is the study of relationships between organisms and their environment.",
@@ -137,15 +142,21 @@ const questions=[
 ];
 function home(){
 document.getElementById("app").innerHTML=`
-<div class="panel"><h2>Welcome to GANDO EDUCATION</h2>
-<p>Study, practise and improve your knowledge.</p>
+<div class="hero"><h2>Welcome to GANDO EDUCATION</h2>
+<p>Learn today. Lead tomorrow.</p>
 <button class="action" onclick="classes()">START LEARNING</button>
-<button class="action" onclick="exam()">TAKE EXAM</button>
+<button class="action" onclick="exam()">TAKE EXAM</button></div>
+<div class="panel"><h2>Our Education Services</h2>
+<div class="feature">📚 Classes: Form I – Form IV</div>
+<div class="feature">📖 Eight school subjects</div>
+<div class="feature">✍️ Topic notes and revision points</div>
+<div class="feature">📝 Practice examinations and results</div>
 </div>
-<div class="panel"><h2>Our Features</h2>
-<p>✓ Form I, Form II, Form III and Form IV</p>
-<p>✓ Eight school subjects</p><p>✓ Topic notes and revision points</p>
-<p>✓ Practice examinations and results</p><p>✓ WhatsApp communication</p></div>`;
+<div class="panel"><h2>CONTACT US</h2>
+<p>Need help? Talk to us directly on WhatsApp.</p>
+<p><b>Phone: +255 716 485 776</b></p>
+<a class="whatsapp" href="https://wa.me/255716485776?text=Hello%20GANDO%20EDUCATION" target="_blank">🟢 CHAT WITH US ON WHATSAPP</a>
+</div>`;
 }
 function classes(){
 document.getElementById("app").innerHTML=`<div class="panel"><h2>Select Your Class</h2>
@@ -165,7 +176,7 @@ ${curriculum[s].map(t=>`<button class="item" onclick="note('${t}')">${t}</button
 <button class="action" onclick="subjects()">Back</button></div>`;
 }
 function note(t){
-let explanation=explanations[t]||`${t} is an important topic in ${selectedSubject}. Study its meaning, main principles, characteristics, examples and applications. Use your class textbook and teacher's guidance to develop a deeper understanding.`;
+let explanation=notes[t]||`${t} is an important topic in ${selectedSubject}. Study its meaning, main principles, characteristics, examples and applications. Use your class textbook and teacher's guidance to develop a deeper understanding.`;
 document.getElementById("app").innerHTML=`<div class="panel">
 <h2>${t}</h2><p>${explanation}</p>
 <h3>Revision Points</h3>
@@ -173,8 +184,6 @@ document.getElementById("app").innerHTML=`<div class="panel">
 <li>Learn the important facts and principles.</li>
 <li>Study examples and applications.</li>
 <li>Practise questions to test your understanding.</li></ul>
-<h3>Practice Question</h3>
-<p>Explain the meaning of ${t} and give two important points about it.</p>
 <button class="action" onclick="topics('${selectedSubject}')">Back to Topics</button>
 </div>`;
 }
@@ -196,12 +205,10 @@ document.getElementById("result").innerHTML=`<div class="panel"><h2>Exam Results
 };
 }
 function contact(){
-document.getElementById("app").innerHTML=`<div class="panel">
-<h2>Contact Us</h2><p>Get in touch with GANDO EDUCATION.</p>
-<p><b>WhatsApp Number:</b> +255 716 485 776</p>
-<a href="https://wa.me/255716485776?text=Hello%20GANDO%20EDUCATION" target="_blank">
-<button class="action green">CHAT WITH US ON WHATSAPP</button></a>
-<p class="small">Produced By Zeko Jr</p>
+document.getElementById("app").innerHTML=`<div class="panel"><h2>CONTACT US</h2>
+<p>GANDO EDUCATION support</p>
+<p><b>WhatsApp: +255 716 485 776</b></p>
+<a class="whatsapp" href="https://wa.me/255716485776?text=Hello%20GANDO%20EDUCATION" target="_blank">CHAT ON WHATSAPP</a>
 </div>`;
 }
 home();
